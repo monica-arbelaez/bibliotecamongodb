@@ -1,7 +1,9 @@
 package com.example.bibliotecamongodb.model;
 
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 
+@Document
 public class AreaTematica {
     @Id
     private String idArea;
