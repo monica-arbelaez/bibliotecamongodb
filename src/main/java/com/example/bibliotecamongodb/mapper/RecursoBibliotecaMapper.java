@@ -1,7 +1,7 @@
 package com.example.bibliotecamongodb.mapper;
 
 import com.example.bibliotecamongodb.DTOs.RecursoBibliotecaDTO;
-import com.example.bibliotecamongodb.model.RecursoBiblioteca;
+import com.example.bibliotecamongodb.model.Recurso;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -9,30 +9,30 @@ import java.util.List;
 
 public class RecursoBibliotecaMapper {
 
-    public RecursoBiblioteca fromDTO(RecursoBibliotecaDTO dto){
-        RecursoBiblioteca recursoBiblioteca = new RecursoBiblioteca();
-        recursoBiblioteca.setId(dto.getIdRecurso());
-        recursoBiblioteca.setTipoRecurso(dto.getTipoRecursoBiblioteca());
-        recursoBiblioteca.setDisponible(dto.getRecursoDisponible());
-        recursoBiblioteca.setFechaPrestamo(dto.getFechaPrestamoRecurso());
-        recursoBiblioteca.setNombre(dto.getNombreRecurso());
-        recursoBiblioteca.setIdArea(dto.getIdAreaTematica());
-        return recursoBiblioteca;
+    public Recurso fromDTO(RecursoBibliotecaDTO dto){
+        Recurso recurso = new Recurso();
+        recurso.setId(dto.getIdRecurso());
+        recurso.setTipoRecurso(dto.getTipoRecursoBiblioteca());
+        recurso.setDisponible(dto.getRecursoDisponible());
+        recurso.setFechaPrestamo(dto.getFechaPrestamoRecurso());
+        recurso.setNombre(dto.getNombreRecurso());
+        recurso.setIdArea(dto.getIdAreaTematica());
+        return recurso;
     }
 
-    public RecursoBibliotecaDTO fromCollection(RecursoBiblioteca recursoBiblioteca){
+    public RecursoBibliotecaDTO fromCollection(Recurso recurso){
         RecursoBibliotecaDTO recursoBibliotecaDTO = new RecursoBibliotecaDTO();
-        recursoBibliotecaDTO.setIdRecurso(recursoBiblioteca.getId());
-        recursoBibliotecaDTO.setTipoRecursoBiblioteca(recursoBiblioteca.getTipoRecurso());
-        recursoBibliotecaDTO.setRecursoDisponible(recursoBiblioteca.getDisponible());
-        recursoBibliotecaDTO.setFechaPrestamoRecurso(recursoBiblioteca.getFechaPrestamo());
-        recursoBibliotecaDTO.setNombreRecurso(recursoBiblioteca.getNombre());
-        recursoBibliotecaDTO.setIdAreaTematica(recursoBiblioteca.getIdArea());
+        recursoBibliotecaDTO.setIdRecurso(recurso.getId());
+        recursoBibliotecaDTO.setTipoRecursoBiblioteca(recurso.getTipoRecurso());
+        recursoBibliotecaDTO.setRecursoDisponible(recurso.getDisponible());
+        recursoBibliotecaDTO.setFechaPrestamoRecurso(recurso.getFechaPrestamo());
+        recursoBibliotecaDTO.setNombreRecurso(recurso.getNombre());
+        recursoBibliotecaDTO.setIdAreaTematica(recurso.getIdArea());
         return  recursoBibliotecaDTO;
 
     }
 
-    public List<RecursoBibliotecaDTO> fromCollectionList(List<RecursoBiblioteca> collection){
+    public List<RecursoBibliotecaDTO> fromCollectionList(List<Recurso> collection){
         if(collection == null) {
             return null;
         }
@@ -40,8 +40,8 @@ public class RecursoBibliotecaMapper {
         Iterator listTracks = collection.iterator();
 
         while(listTracks.hasNext()) {
-            RecursoBiblioteca recursoBiblioteca = (RecursoBiblioteca) listTracks.next();
-            list.add(fromCollection(recursoBiblioteca));
+            Recurso recurso = (Recurso) listTracks.next();
+            list.add(fromCollection(recurso));
         }
         return list;
     }

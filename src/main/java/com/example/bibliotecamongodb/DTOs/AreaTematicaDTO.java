@@ -5,6 +5,9 @@ public class AreaTematicaDTO {
     private String idAreaTematica;
     private String categoriaAreaTematica;
 
+    public AreaTematicaDTO() {
+    }
+
     public String getIdAreaTematica() {
         return idAreaTematica;
     }

@@ -1,7 +1,7 @@
 package com.example.bibliotecamongodb.mapper;
 
 import com.example.bibliotecamongodb.DTOs.AreaTematicaDTO;
-import com.example.bibliotecamongodb.model.AreaTematica;
+import com.example.bibliotecamongodb.model.Area;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -9,21 +9,21 @@ import java.util.List;
 
 public class AreaTematicaMapper {
 
-    public AreaTematica fromDTO(AreaTematicaDTO dto){
-        AreaTematica areaTematica = new AreaTematica();
-        areaTematica.setIdArea(dto.getIdAreaTematica());
-        areaTematica.setCategoriaArea(dto.getCategoriaAreaTematica());
+    public Area fromDTO(AreaTematicaDTO dto){
+        Area area = new Area();
+        area.setIdArea(dto.getIdAreaTematica());
+        area.setCategoriaArea(dto.getCategoriaAreaTematica());
 
-        return areaTematica;
+        return area;
     }
-    public AreaTematicaDTO fromCollection(AreaTematica areaTematica){
+    public AreaTematicaDTO fromCollection(Area area){
         AreaTematicaDTO areaTematicaDTO = new AreaTematicaDTO();
-        areaTematicaDTO.setIdAreaTematica(areaTematica.getIdArea());
-        areaTematicaDTO.setCategoriaAreaTematica(areaTematica.getCategoriaArea());
+        areaTematicaDTO.setIdAreaTematica(area.getIdArea());
+        areaTematicaDTO.setCategoriaAreaTematica(area.getCategoriaArea());
 
         return areaTematicaDTO;
     }
-    public List<AreaTematicaDTO> fromCollectionList(List<AreaTematica> collection){
+    public List<AreaTematicaDTO> fromCollectionList(List<Area> collection){
         if(collection == null){
             return null;
         }
@@ -31,8 +31,8 @@ public class AreaTematicaMapper {
         Iterator listTracks = collection.iterator();
 
         while(listTracks.hasNext()) {
-            AreaTematica areaTematica =(AreaTematica) listTracks.next();
-            list.add(fromCollection(areaTematica));
+            Area area =(Area) listTracks.next();
+            list.add(fromCollection(area));
         }
         return list;
     }

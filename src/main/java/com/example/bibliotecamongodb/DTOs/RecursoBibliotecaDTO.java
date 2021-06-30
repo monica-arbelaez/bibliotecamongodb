@@ -1,7 +1,5 @@
 package com.example.bibliotecamongodb.DTOs;
 
-import java.util.Date;
-
 public class RecursoBibliotecaDTO {
     private String idRecurso;
     private String tipoRecursoBiblioteca;
@@ -9,6 +7,9 @@ public class RecursoBibliotecaDTO {
     private String fechaPrestamoRecurso;
     private String nombreRecurso;
     private String idAreaTematica;
+
+    public RecursoBibliotecaDTO() {
+    }
 
     public String getIdRecurso() {
         return idRecurso;
