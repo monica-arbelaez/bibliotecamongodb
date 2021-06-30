@@ -21,14 +21,15 @@ public class ControladorRecurso {
         }
         return new ResponseEntity(HttpStatus.NOT_FOUND);
     }
-//    @PutMapping("/develver/{id}")
-//    public  ResponseEntity<String>devolverRecursoBiblioteca(@PathVariable String id){
-//        var respuesta = servicioRecursoBiblioteca.devolverRecursoBiblioteca(id);
-//        if (respuesta != null){
-//            return new ResponseEntity(respuesta,HttpStatus.OK);
-//        }
-//        return new ResponseEntity(HttpStatus.NOT_ACCEPTABLE);
-//    }
+    @PutMapping("/develver/{id}")
+    public  ResponseEntity<String>devolverRecursoBiblioteca(@PathVariable String id){
+        var respuesta = servicioRecursoBiblioteca.devolverRecursoBiblioteca(id);
+        if (respuesta != null){
+            return new ResponseEntity(respuesta,HttpStatus.OK);
+        }
+        return new ResponseEntity(HttpStatus.NOT_ACCEPTABLE);
+    }
+    
 
 
 }

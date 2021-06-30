@@ -3,6 +3,9 @@ package com.example.bibliotecamongodb.model;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import java.time.LocalDate;
+import java.util.Date;
+
 
 @Document
 public class Recurso {
@@ -10,7 +13,7 @@ public class Recurso {
     private String id;
     private String tipoRecurso;
     private Boolean disponible;
-    private String fechaPrestamo;
+    private LocalDate fechaPrestamo;
     private String nombre;
     private String idArea;
 
@@ -38,12 +41,12 @@ public class Recurso {
         this.disponible = disponible;
     }
 
-    public String getFechaPrestamo() {
+    public LocalDate getFechaPrestamo() {
         return fechaPrestamo;
     }
 
-    public void setFechaPrestamo(String fechaPrestamo) {
-        this.fechaPrestamo = fechaPrestamo;
+    public void setFechaPrestamo(LocalDate fechaPrestamo) {
+        this.fechaPrestamo = LocalDate.now();
     }
 
     public String getNombre() {

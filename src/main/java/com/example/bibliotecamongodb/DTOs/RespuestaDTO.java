@@ -1,11 +1,12 @@
 package com.example.bibliotecamongodb.DTOs;
 
 import java.time.LocalDate;
+import java.util.Date;
 
 public class RespuestaDTO {
     private String respuesta;
     private Boolean disponible;
-    private String fechaPrestamo;
+    private LocalDate fechaPrestamo;
 
     public RespuestaDTO() {
     }
@@ -26,11 +27,11 @@ public class RespuestaDTO {
         this.disponible = disponible;
     }
 
-    public String getFechaPrestamo() {
+    public LocalDate getFechaPrestamo() {
         return fechaPrestamo;
     }
 
-    public void setFechaPrestamo(String fechaPrestamo) {
+    public void setFechaPrestamo(LocalDate fechaPrestamo) {
         this.fechaPrestamo = fechaPrestamo;
     }
 }

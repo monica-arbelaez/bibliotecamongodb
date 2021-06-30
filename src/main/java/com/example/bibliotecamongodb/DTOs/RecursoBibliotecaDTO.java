@@ -1,10 +1,13 @@
 package com.example.bibliotecamongodb.DTOs;
 
+import java.time.LocalDate;
+import java.util.Date;
+
 public class RecursoBibliotecaDTO {
     private String idRecurso;
     private String tipoRecursoBiblioteca;
     private Boolean recursoDisponible;
-    private String fechaPrestamoRecurso;
+    private LocalDate fechaPrestamoRecurso;
     private String nombreRecurso;
     private String idAreaTematica;
 
@@ -35,11 +38,11 @@ public class RecursoBibliotecaDTO {
         this.recursoDisponible = recursoDisponible;
     }
 
-    public String getFechaPrestamoRecurso() {
+    public LocalDate getFechaPrestamoRecurso() {
         return fechaPrestamoRecurso;
     }
 
-    public void setFechaPrestamoRecurso(String fechaPrestamoRecurso) {
+    public void setFechaPrestamoRecurso(LocalDate fechaPrestamoRecurso) {
         this.fechaPrestamoRecurso = fechaPrestamoRecurso;
     }
 
