@@ -11,9 +11,7 @@ import com.example.bibliotecamongodb.repository.RepositorioRecursoBiblioteca;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.text.SimpleDateFormat;
 import java.time.LocalDate;
-import java.util.Date;
 import java.util.List;
 
 @Service
@@ -26,9 +24,6 @@ public class ServicioRecursoBiblioteca {
     private RepositorioAreaTematica repositorioAreaTematica;
 
     private RecursoBibliotecaMapper mapper = new RecursoBibliotecaMapper();
-//    private Date objDate = new Date();
-//    private String strDateFormat = "hh: mm: ss a dd-MMM-aaaa";
-//    private SimpleDateFormat objSDF = new SimpleDateFormat(strDateFormat);
 
 
 
@@ -86,5 +81,14 @@ public class ServicioRecursoBiblioteca {
         respuestaDTO.setRespuesta("El recurso se encuentra en la lista de inventario");
         return respuestaDTO;
     }
-
+//    public ListarRecursosAreasDTO recomendar(String idArea){
+//       ListarRecursosAreasDTO recursosArea = new ListarRecursosAreasDTO();
+////       AreaTematicaDTO areaTematica = repositorioAreaTematica.findById(idArea).orElseThrow(->new RuntimeException("El area no fue encontrada"));
+//        var areaTematica = repositorioAreaTematica.findById(idArea);
+//        var list = repositorioRecursoBiblioteca.BuscarPorArea(idArea);
+//        recursosArea.setTipoArea(mapper.recursos);
+//
+//
+//
+//    }
 }

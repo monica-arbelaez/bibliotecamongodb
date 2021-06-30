@@ -29,7 +29,6 @@ public class ControladorRecurso {
         }
         return new ResponseEntity(HttpStatus.NOT_ACCEPTABLE);
     }
-    
 
 
 }

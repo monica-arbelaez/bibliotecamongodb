@@ -6,7 +6,7 @@ import java.util.List;
 
 public class ListarRecursosAreasDTO {
     private String TipoArea;
-    private List<Recurso> recursos;
+    private List<RecursoBibliotecaDTO> recursos;
 
     public ListarRecursosAreasDTO() {
     }
@@ -19,11 +19,11 @@ public class ListarRecursosAreasDTO {
         TipoArea = tipoArea;
     }
 
-    public List<Recurso> getRecursos() {
+    public List<RecursoBibliotecaDTO> getRecursos() {
         return recursos;
     }
 
-    public void setRecursos(List<Recurso> recursos) {
+    public void setRecursos(List<RecursoBibliotecaDTO> recursos) {
         this.recursos = recursos;
     }
 }
