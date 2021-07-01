@@ -6,7 +6,7 @@ import java.util.Date;
 public class RespuestaDTO {
     private String respuesta;
     private Boolean disponible;
-    private LocalDate fechaPrestamo;
+    private String fechaPrestamo;
 
     public RespuestaDTO() {
     }
@@ -27,11 +27,11 @@ public class RespuestaDTO {
         this.disponible = disponible;
     }
 
-    public LocalDate getFechaPrestamo() {
+    public String getFechaPrestamo() {
         return fechaPrestamo;
     }
 
-    public void setFechaPrestamo(LocalDate fechaPrestamo) {
+    public void setFechaPrestamo(String fechaPrestamo) {
         this.fechaPrestamo = fechaPrestamo;
     }
 }

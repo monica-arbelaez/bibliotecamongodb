@@ -7,7 +7,7 @@ public class RecursoBibliotecaDTO {
     private String idRecurso;
     private String tipoRecursoBiblioteca;
     private Boolean recursoDisponible;
-    private LocalDate fechaPrestamoRecurso;
+    private String fechaPrestamoRecurso;
     private String nombreRecurso;
     private String idAreaTematica;
 
@@ -38,11 +38,11 @@ public class RecursoBibliotecaDTO {
         this.recursoDisponible = recursoDisponible;
     }
 
-    public LocalDate getFechaPrestamoRecurso() {
+    public String getFechaPrestamoRecurso() {
         return fechaPrestamoRecurso;
     }
 
-    public void setFechaPrestamoRecurso(LocalDate fechaPrestamoRecurso) {
+    public void setFechaPrestamoRecurso(String fechaPrestamoRecurso) {
         this.fechaPrestamoRecurso = fechaPrestamoRecurso;
     }
 
