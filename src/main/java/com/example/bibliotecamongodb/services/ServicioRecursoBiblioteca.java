@@ -101,11 +101,6 @@ public class ServicioRecursoBiblioteca {
 
     }
 
-//    public RespuestaDTO recomendarTipoRecurso(String tipoRecursoBiblioteca){
-//
-//        RespuestaDTO respuestaDTO = new RespuestaDTO();
-//        var list =repositorioRecursoBiblioteca.findRecursoBytipoRecursoBiblioteca(tipoRecursoBiblioteca);
-//
-//    }
+
 
 }

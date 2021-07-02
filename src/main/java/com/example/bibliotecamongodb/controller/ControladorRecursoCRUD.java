@@ -20,16 +20,14 @@ public class ControladorRecursoCRUD {
 
     @PostMapping("/crearRecurso")
     public ResponseEntity<RecursoBibliotecaDTO> crear (@RequestBody RecursoBibliotecaDTO recursoBibliotecaDTO){
-//        if(recursoBibliotecaDTO.getIdRecurso()== null){
-//            return new ResponseEntity(HttpStatus.NOT_FOUND);
-//        }
+
         return new ResponseEntity(servicioRecursoBibliotecaCRUD.crearRecursoBiblioteca(recursoBibliotecaDTO),HttpStatus.CREATED);
     }
 
 
-    @GetMapping("/concultarRecuso/{id}")
+    @GetMapping("/concultarRecurso/{id}")
     public ResponseEntity<String> concultarRecusoBiblioteca(@PathVariable("id") String id){
-        var respuesta = servicioRecursoBibliotecaCRUD.concultarRecusoBiblioteca(id);
+        var respuesta = servicioRecursoBibliotecaCRUD.concultarRecursoBiblioteca(id);
         if(respuesta != null){
             return new ResponseEntity(respuesta, HttpStatus.OK);
         }

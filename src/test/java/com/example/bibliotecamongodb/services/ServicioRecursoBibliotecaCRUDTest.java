@@ -1,5 +1,7 @@
 package com.example.bibliotecamongodb.services;
 
+import com.example.bibliotecamongodb.DTOs.RecursoBibliotecaDTO;
+import com.example.bibliotecamongodb.model.Area;
 import com.example.bibliotecamongodb.model.Recurso;
 import com.example.bibliotecamongodb.repository.RepositorioRecursoBiblioteca;
 import org.junit.jupiter.api.Assertions;
@@ -9,10 +11,12 @@ import org.mockito.Mockito;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
+import static org.mockito.ArgumentMatchers.any;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
+
 
 
 @SpringBootTest
@@ -65,6 +69,34 @@ class ServicioRecursoBibliotecaCRUDTest {
         Assertions.assertEquals(recurso1.getNombre(),respuesta.get(0).getNombreRecurso());
         Assertions.assertEquals(recurso2.getNombre(),respuesta.get(1).getNombreRecurso());
         Assertions.assertEquals(recurso3.getNombre(),respuesta.get(2).getNombreRecurso());
+    }
+
+    @Test
+    void crearRecursoBiblioteca() {
+
+        var recurso1 = new Recurso();
+        recurso1.setId("8765");
+        recurso1.setTipoRecurso("libro");
+        recurso1.setDisponible(true);
+        recurso1.setFechaPrestamo(objSDF.format(objDate));
+        recurso1.setNombre("El amor en los tiempos del colera");
+        recurso1.setIdArea("6789900");
+
+        var recurso3 = new RecursoBibliotecaDTO();
+        recurso3.setIdRecurso("87552");
+        recurso3.setTipoRecursoBiblioteca("libro");
+        recurso3.setRecursoDisponible(false);
+        recurso3.setFechaPrestamoRecurso(objSDF.format(objDate));
+        recurso3.setNombreRecurso("El principito");
+        recurso3.setIdAreaTematica("6789955");
+
+        Mockito.when(repositorioRecursoBiblioteca.save(any())).thenReturn((recurso1));
+
+
+        var resultado = servicioRecursoBibliotecaCRUD.crearRecursoBiblioteca(recurso3);
+        Assertions.assertEquals(recurso1.getNombre(),resultado.getNombreRecurso());
+
+
     }
 
 

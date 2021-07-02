@@ -1,7 +1,6 @@
 package com.example.bibliotecamongodb.DTOs;
 
-import java.time.LocalDate;
-import java.util.Date;
+
 
 public class RespuestaDTO {
     private String respuesta;

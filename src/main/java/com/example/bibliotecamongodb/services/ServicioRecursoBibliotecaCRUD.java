@@ -51,7 +51,7 @@ public class ServicioRecursoBibliotecaCRUD {
         return areaMapper.fromCollectionList(areas);
     }
 
-    public String concultarRecusoBiblioteca( String id){
+    public String concultarRecursoBiblioteca( String id){
         var recursoBiblioteca = repositorioRecursoBiblioteca.findById(id);
         if(recursoBiblioteca.get().getDisponible()){
             return "El recurso esta disponible para prestamo";
